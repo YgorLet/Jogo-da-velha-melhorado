@@ -1,0 +1,268 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+// Definir o número máximo de tentativas
+#define MAX_TENTATIVAS 6
+
+// Definir a lista de palavras possíveis
+char *palavras[] = {"programacao", "computador", "sistemas", "algoritmos", "estrutura", "desenvolvimento", "tecnologia", "programador", "linguagem"};
+
+// Obter o número de palavras na lista
+const int num_palavras = sizeof(palavras) / sizeof(char *);
+
+// Função para escolher uma palavra aleatória da lista
+char *escolher_palavra()
+{
+    srand(time(NULL));
+    int indice = rand() % num_palavras;
+    return palavras[indice];
+}
+
+// Função para mostrar a palavra atual e as letras já escolhidas
+void mostrar_palavra(char *palavra, int *letras_escolhidas)
+{
+    int tam = strlen(palavra);
+    for (int i = 0; i < tam; i++)
+    {
+        if (letras_escolhidas[i])
+        {
+            printf("%c ", palavra[i]);
+        }
+        else
+        {
+            printf("_ ");
+        }
+    }
+    printf("\n");
+}
+
+// Função para verificar se o jogador ganhou
+int verificar_ganhador(int *letras_escolhidas, int tam)
+{
+    
+{
+   
+
+{
+for (int i = 0; i < tam; i++)
+    {
+        
+    {
+       
+
+    {
+
+   
+if (!letras_escolhidas[i])
+        {
+            
+        {
+           
+return 0;
+        }
+    }
+    
+        }
+    }
+   
+
+        }
+    }
+
+        }
+   
+
+       
+return 1;
+}
+
+int main()
+{
+    
+{
+   
+
+{
+// Escolher a palavra aleatória
+    
+   
+char *palavra = escolher_palavra();
+    
+   
+int tam = strlen(palavra);
+
+    
+
+   
+
+
+// Inicializar as letras escolhidas
+    
+   
+int letras_escolhidas[tam];
+    for (int i = 0; i < tam; i++)
+    {
+        letras_escolhidas[i] = 
+    {
+        letras_escolhidas[i] = 
+
+    {
+        letras_escolhidas[i] =
+
+    {
+        letras_escolhidas[i]
+
+    {
+        letras_escolhidas[i
+
+    {
+        letras_escolhidas
+
+    {
+        letras_escolh
+
+    {
+        letras_escol
+
+    {
+        letras_es
+
+    {
+        letras
+
+    {
+       
+
+    {
+
+   
+0;
+    }
+
+    
+    }
+
+   
+
+    }
+
+
+   
+// Inicializar o número de tentativas restantes
+    
+   
+int num_tentativas = MAX_TENTATIVAS;
+
+    
+
+   
+
+
+// Loop principal do jogo
+    while (num_tentativas > 0 && !verificar_ganhador(letras_escolhidas, tam))
+    {
+        
+    {
+       
+
+    {
+// Mostrar a palavra atual e as letras já escolhidas
+        
+       
+printf("Palavra: ");
+        mostrar_palavra(palavra, letras_escolhidas);
+
+        
+        mostrar_palavra(palavra, letras_escolhidas);
+
+       
+
+        mostrar_palavra(palavra, letras_escolhidas);
+
+
+        mostrar_palavra(palavra, letras_escolhidas
+
+        mostrar_palavra(palavra, letras_escolh
+
+        mostrar_palavra(palavra, letras_escol
+
+        mostrar_palavra(palavra, letras_es
+
+        mostrar_palavra(palavra, letras
+
+        mostrar_palavra(palavra,
+
+        mostrar_palavra(palavra
+
+        mostrar_palavra(pal
+
+        mostrar_palavra(p
+
+        mostrar_palavra
+
+        mostrar_pal
+
+        mostrar
+
+       
+// Mostrar o número de tentativas restantes
+        
+       
+printf("Tentativas restantes: %d\n", num_tentativas);
+
+        
+
+       
+
+
+// Obter a letra escolhida pelo jogador
+        char letra;
+        
+       
+printf("Escolha uma letra: ");
+        
+       
+scanf(" %c", &letra);
+
+        
+
+       
+
+
+// Verificar se a letra escolhida está na palavra
+        
+       
+int acertou = 0;
+        
+       
+for (int i = 0; i < tam; i++)
+        {
+            
+        {
+           
+
+        {
+
+       
+if (palavra[i] == letra)
+            {
+                letras_escolhidas[i] = 
+            {
+                letras_escolhidas[i]
+
+            {
+                letras_escolhidas[i
+
+            {
+                letras_escolhidas
+
+            {
+                letras_es
+
+            {
+                letras
+
+           
+1;
